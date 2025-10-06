@@ -1,0 +1,307 @@
+/* Reset y base minimalista */
+.App {
+  min-height: 100vh;
+  background: #fafafa; /* fondo claro tipo editor */
+  color: #1f2328;
+}
+
+.container {
+  max-width: 900px; /* ancho de lectura cómodo */
+  padding: 2rem 1.25rem;
+}
+
+/* Tipografía tipo markdown */
+.display-4, h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #0f172a; /* slate-900 */
+  text-shadow: none;
+}
+
+h1.display-4 {
+  font-size: 2rem; /* título sobrio */
+  margin: 0 0 0.5rem 0;
+}
+
+.lead {
+  color: #475569; /* slate-600 */
+}
+
+/* Secciones tipo markdown */
+.md-section {
+  background: #ffffff;
+  border: 1px solid #e5e7eb; /* gris sutil */
+  border-radius: 12px;
+  padding: 1.25rem 1.25rem;
+  margin: 1rem 0 1.25rem 0;
+}
+
+.md-section h2,
+.md-section h3 {
+  margin-top: 0;
+}
+
+.md-muted {
+  color: #64748b; /* slate-500 */
+}
+
+/* Lista de actividades como lista markdown */
+.activity-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+}
+
+.activity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.activity-item + .activity-item { margin-top: 0.6rem; }
+
+.activity-item:hover {
+  background: #f8fafc; /* hover sutil */
+  border-color: #dbeafe; /* azul muy claro */
+}
+
+.activity-title {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.activity-desc {
+  margin: 0.15rem 0 0 0;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+/* Botones minimalistas */
+.btn-md {
+  appearance: none;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  color: #0f172a;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-md:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.btn-link {
+  color: #2563eb; /* azul accesible */
+  text-decoration: none;
+}
+
+.btn-link:hover { text-decoration: underline; }
+
+/* Sidebar minimalista */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 280px;
+  height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  z-index: 1000;
+  transition: left 0.3s ease;
+  overflow-y: auto;
+}
+
+.sidebar-open {
+  left: 0;
+}
+
+
+.sidebar-header {
+  padding: 1.5rem 1.25rem 1rem 1.25rem;
+  border-bottom: 1px solid #f1f5f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.sidebar-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #64748b;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-close:hover {
+  color: #0f172a;
+}
+
+.sidebar-nav {
+  padding: 0.5rem 0;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-item {
+  margin: 0;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  color: #475569;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.sidebar-link:hover {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.sidebar-link.active {
+  background: #f1f5f9;
+  color: #0f172a;
+  border-left-color: #2563eb;
+  font-weight: 600;
+}
+
+.sidebar-icon {
+  font-size: 1.1rem;
+  margin-right: 0.75rem;
+  width: 20px;
+  text-align: center;
+}
+
+.sidebar-label {
+  font-weight: 500;
+}
+
+/* Botón toggle para móvil */
+.sidebar-toggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1001;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  font-size: 1.2rem;
+  color: #475569;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.sidebar-toggle:hover {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* Contenido principal con margen para sidebar */
+.main-content {
+  margin-left: 0;
+  transition: margin-left 0.3s ease;
+}
+
+/* En desktop, sidebar siempre visible */
+@media (min-width: 768px) {
+  .sidebar {
+    left: 0;
+    position: fixed;
+  }
+  
+  .sidebar-toggle {
+    display: none;
+  }
+  
+  .main-content {
+    margin-left: 280px;
+  }
+  
+  .sidebar-close {
+    display: none;
+  }
+}
+
+/* Actividades minimalistas con acentos pasteles */
+.activity {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+
+.activity .activity-header {
+  background: transparent;
+  color: inherit;
+  padding: 1.25rem 1.25rem 0.75rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid #f1f5f9;
+  border-left: 6px solid var(--accent, #e5e7eb);
+}
+
+.activity .activity-content { padding: 1.25rem; }
+
+/* Chips de acento */
+.accent-chip {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  background: rgba(99, 102, 241, 0.1); /* indigo-100 fallback */
+  border: 1px solid rgba(99, 102, 241, 0.2); /* indigo-200 fallback */
+  color: #0f172a;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Paletas pastel por actividad */
+.activity--a1 { --accent: #c7d2fe; /* indigo-200 */ }
+.activity--a2 { --accent: #bbf7d0; /* green-200 */ }
+.activity--a3a { --accent: #fde68a; /* amber-300 */ }
+.activity--a3b { --accent: #fecdd3; /* rose-200 */ }
+
+/* Componentes internos suaves */
+.activity .card { box-shadow: none; border: 1px solid #e5e7eb; }
+.activity .interactive-demo { background: #f9fafb; border-color: #e5e7eb; }
+
+/* Utilidades */
+.mt-0 { margin-top: 0; }
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: .25rem; }
+.mb-2 { margin-bottom: .5rem; }
+.mb-3 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+
+/* Animación suave opcional */
+.fade-in { animation: fadeIn .3s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px);} to { opacity:1; transform:none; } }

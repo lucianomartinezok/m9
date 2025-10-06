@@ -1,0 +1,32 @@
+/* Baseline compatible con Bootstrap: sin override agresivo del layout */
+:root {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: transparent; /* El fondo lo maneja .App */
+  color: inherit; /* Deja que Bootstrap y nuestros estilos definan colores */
+}
+
+/* Enlaces por defecto (Bootstrap se encarga del estilo) */
+a {
+  text-decoration: none;
+}
+
+/* Botones: no forzar estilos base (Bootstrap define) */
+button {
+  font-family: inherit;
+}
+
+/* Tipografías base para títulos (dejamos Bootstrap por defecto) */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
