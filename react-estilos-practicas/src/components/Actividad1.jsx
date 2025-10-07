@@ -126,9 +126,17 @@ ReactDOM.render(StyleMe, document.getElementById("root"));`}
             Usa el estado showCodeA para controlar la visibilidad
           */}
           <div className="mt-3">
+            {/*
+              Botón que alterna la visibilidad del bloque de código de la Propuesta A.
+              - onClick: invierte el estado booleano `showCodeA` llamando a `setShowCodeA(!showCodeA)`.
+              - Texto del botón: muestra "Ocultar" cuando `showCodeA` es true (el código está visible),
+                o "Ver" cuando `showCodeA` es false (el código está oculto).
+              - Más abajo en el componente se usa `showCodeA` para renderizar condicionalmente
+                el bloque de solución: `{showCodeA && ( ... )}`.
+            */}
             <button 
               className="btn-md"
-              onClick={() => setShowCodeA(!showCodeA)} // Toggle del estado
+              onClick={() => setShowCodeA(!showCodeA)}
             >
               {showCodeA ? 'Ocultar' : 'Ver'} Código de la Solución
             </button>
