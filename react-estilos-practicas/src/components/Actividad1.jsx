@@ -8,7 +8,7 @@
  * 2. Objetos de estilos (style objects)
  * 
  * Objetivo: Aprender las diferencias entre ambos enfoques y cuándo usar cada uno.
- */
+ */ 
 
 // Importaciones necesarias
 import React, { useState } from 'react';  // useState para manejar el estado de los botones
